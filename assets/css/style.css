@@ -29,7 +29,7 @@ body {
 }
 
 *::selection {
-  background: #2b3dda;
+  background: #2506ad;
   color: #fff;
 }
 
@@ -44,7 +44,7 @@ html::-webkit-scrollbar-track {
   background: rgb(235, 202, 245);
 }
 html::-webkit-scrollbar-thumb {
-  background: #420177;
+  background: #2506ad;
 }
 
 /* pre loader start */
@@ -75,13 +75,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.7rem 10%;
+  padding: 1.7rem 5%;
   height: 6.5rem;
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 }
 section {
-  min-height: 100vh;
+  min-height: 110vh;
   padding: 2rem 9%;
 }
 .heading {
@@ -124,8 +124,8 @@ header .navbar ul li a {
 }
 header .navbar ul li a.active,
 header .navbar ul li a:hover {
-  color: #011aff;
-  border-bottom: 0.2rem solid #011aff;
+  color: #2506ad;
+  border-bottom: 0.2rem solid #2506ad;
   padding: 0.5rem 0;
 }
 /* navbar ends */
@@ -174,7 +174,7 @@ header .navbar ul li a:hover {
     padding: 1rem;
     color: #fff;
     border-radius: 0.5rem;
-    border-bottom: 0.5rem solid #011aff;
+    border-bottom: 0.5rem solid #2506ad;
   }
   .fa-times {
     transform: rotate(180deg);
@@ -593,7 +593,7 @@ button:hover {
   text-transform: none;
 }
 .about .row .content .box-container .box p span {
-  color: #011aff;
+  color: #2506ad;
 }
 .resumebtn {
   margin-top: 6rem;
@@ -1192,6 +1192,116 @@ button:hover {
 /* experience media queries ends */
 /* experience section ends */
 
+/* pricing section starts */
+.pricing {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+.pricing .heading {
+  margin-bottom: 40px;
+  animation: fadeInDown 1s ease-in-out;
+}
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+.pricing-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pricing-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.pricing-box h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  animation: fadeIn 1s ease-in-out;
+}
+.pricing-box .price {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+.pricing-box .price span {
+  font-size: 1rem;
+  color: #666;
+}
+.pricing-box ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+.pricing-box ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.pricing-box ul li i {
+  color: #007bff;
+  margin-right: 10px;
+}
+.pricing-box .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+.pricing-box .btn:hover {
+  background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* pricing section ends */
+
+
+
 /* testimonials section starts */
 .testimonials {
   padding: 5rem 0;
@@ -1302,9 +1412,9 @@ button:hover {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-.active, .dot:hover {
+/* .active, .dot:hover {
   background-color: #ffffff;
-}
+} */
 
 
 /* contact section starts */
@@ -1477,17 +1587,17 @@ form .button-area {
   flex-wrap: wrap;
 }
 .footer .box-container .box {
-  flex: 1 1 25rem;
+  flex: 1 1 20rem; /* decreased size */
   margin: 2.5rem;
 }
 .footer .box-container .box h3 {
-  font-size: 2.5rem;
+  font-size: 2rem; /* decreased size */
   color: #fff;
   padding-bottom: 1rem;
   font-weight: normal;
 }
 .footer .box-container .box p {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* decreased size */
   color: #ccc;
   padding: 0.7rem 0;
   text-transform: none;
@@ -1497,7 +1607,7 @@ form .button-area {
   color: #ffae00;
 }
 .footer .box-container .box a {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* decreased size */
   color: rgb(238, 238, 238);
   padding: 0.3rem 0;
   display: block;
@@ -1511,12 +1621,12 @@ form .button-area {
   padding: 1rem 0;
 }
 .footer .box-container .box .share a {
-  height: 4rem;
-  width: 4rem;
-  padding: 1rem;
+  height: 3rem; /* decreased size */
+  width: 3rem; /* decreased size */
+  padding: 0.8rem; /* decreased size */
   text-align: center;
   border-radius: 5rem;
-  font-size: 1.7rem;
+  font-size: 1.4rem; /* decreased size */
   margin-right: 1rem;
   transition: 0.2s;
   background: rgb(230, 230, 230);
@@ -1532,7 +1642,7 @@ form .button-area {
 .footer .credit {
   padding: 1rem 0 0 0;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* decreased size */
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   color: #fff;
@@ -1544,7 +1654,7 @@ form .button-area {
 .footer .fa {
   color: #e90606;
   margin: 0 0.3rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* decreased size */
   animation: pound 0.35s infinite alternate;
 }
 @-webkit-keyframes pound {
@@ -1565,7 +1675,7 @@ form .button-area {
     padding: 0.7rem;
   }
   .footer .box-container .box .share a {
-    padding: 1.2rem;
+    padding: 1rem; /* decreased size */
   }
 }
 /* footer section ends */
@@ -1604,14 +1714,14 @@ form .button-area {
 
 /* Ai Assistant */
 .ai-assistant {
-  padding: 3rem 1rem;
+  padding: 2rem 1rem; /* decreased size */
   background-color: #f8f9fa;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 .ai-assistant .heading {
-  font-size: 2rem;
+  font-size: 1.5rem; /* decreased size */
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -1625,20 +1735,20 @@ form .button-area {
 }
 
 .assistant-container {
-  max-width: 300px;
+  max-width: 250px; /* decreased size */
   margin: 0 auto;
 }
 
 .assistant-content {
   background-color: #ffffff;
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1rem; /* decreased size */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .assistant-content p {
-  font-size: 1rem;
+  font-size: 0.8rem; /* decreased size */
   margin-bottom: 1rem;
 }
 
@@ -1648,8 +1758,8 @@ form .button-area {
 
 .assistant-button .btn {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
+  padding: 0.5rem 1rem; /* decreased size */
+  font-size: 0.8rem; /* decreased size */
   color: #ffffff;
   background-color: #007bff;
   border: none;
