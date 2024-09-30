@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Sudais Khalid, portfolio, Sudais, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Sudais Khalid's Portfolio. Ai Engineer and Graphics Designer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+    <title>Portfolio | Sudais Khalid</title>
+</head>
+<body oncontextmenu="return false">
+
+<!-- Welcome Window
+<div id="welcomeWindow" class="welcome-window">
+  <div class="welcome-content">
+    <img src="./assets/images/logo.png" alt="Sudais Khalid Logo" class="welcome-logo">
+    <h1>Welcome to My Portfolio</h1>
+    <br>
+    <h3>Please enter your email to continue:</h3>
+    <input type="email" id="visitorEmail" placeholder="Your email">
+
+    <button class="welcome-button" onclick="submitEmail()">Let's Explore</button>
+  </div>
+</div> -->
+ 
+<!-- pre loader -->
+<div class="loader-container">
+  <img draggable="false" src="./assets/images/preloader.gif" alt="">
+</div>
+
+<!-- navbar starts -->
+<header>
+        <a href="/" class="logo" onclick="location.reload(); return false;"><img width="130px" height="90px" src="./assets/images/logo.png" alt=""></a>
+
+        <div id="menu" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://patreon.com/sudaiskhalid?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Support Me</a></li>
+            </ul>
+        </nav>
+</header>
+<!-- navbar ends -->
+
+
+<!-- hero section starts -->
+<section class="home" id="home" style="background-image: url('./assets/images/bg.avif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  
+    <div id="particles-js"></div>
+
+    <div class="content">
+    <h2>Hi There,<br/> I'm Sudais <span>Khalid</span></h2>
+    <p>I am into <span class="typing-text"></span></p>
+    <a href="#webinar" class="btn"><span>Free Ai Webinar</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a><br><br><br><br><br>
+    <a href="https://api.whatsapp.com/send?phone=923185133092" class="btn"><span>Hire Me Now</span>
+      <i class="fas fa-user-tie"></i>
+    </a>
+    <div class="socials">
+
+        <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/muhammad-sudais-khalid-ba272830b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="https://github.com/muhammadsudaiskhalid" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="behance" aria-label="Behance" href="https://www.behance.net/muhammadsudaiskhalid" target="_blank"><i class="fab fa-behance"></i></a></li>
+          <li><a class="telegram" aria-label="Telegram" href="https://t.me/+923185133092" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/sudaiskhalid21236?igsh=cTZ5cHJqbjVxMGNk"><i class="fab fa-instagram" target="_blank"></i></a></li>
+          <a href="mailto:sudaiskhalid21236@gmail.com" class="fas fa-envelope" target="_blank"></a>
+        </ul>
+      </div>
+    </div>
+<div class="image">
+    <img draggable="false" class="tilt" src="./assets/images/hero2.jpg" alt="">
+</div>
+</section>
+<!-- hero section ends -->
+
+
+<!-- Start Generation Here -->
+<section class="webinar" id="webinar">
+    <h2 class="heading"><i class="fas fa-chalkboard-teacher"></i> Online <span>Webinar</span></h2>
+    <div class="row">
+        <div class="content">
+            <h3>Why to join this webinar?</h3>
+            <p>This webinar is an in-depth introduction to Artificial Intelligence (AI). It will cover the fundamental concepts and principles of AI, including its history, key technologies, and real-world applications. Participants will learn about machine learning, natural language processing, computer vision, and robotics. The webinar will also explore how AI systems are designed to simulate human intelligence, enabling them to think, learn, and adapt autonomously. By the end of the session, attendees will have a comprehensive understanding of AI and its potential to transform various industries.</p>
+            <div id="countdown">
+                <h4>Webinar Countdown</h4>
+                <p id="countdown-timer"></p>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    var countdownTimer = document.getElementById('countdown-timer');
+                    var targetDate = new Date('2024-10-10T00:00:00').getTime();
+
+                    var updateCountdown = setInterval(function() {
+                        var now = new Date().getTime();
+                        var distance = targetDate - now;
+
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        countdownTimer.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+                        if (distance < 0) {
+                            clearInterval(updateCountdown);
+                            countdownTimer.innerHTML = "The webinar has started!";
+                        }
+                    }, 1000);
+                });
+            </script>
+            <a href="https://forms.gle/9TEMEUQVnbL3iqhPA" class="btn"><span>Enroll Now</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="image">
+          <a href="#"><img draggable="false" class="tilt" src="./assets/images/webinar/ai.png" alt="Webinar Poster"></a>
+        </div>
+    </div>
+</section>
+<!-- End Generation Here -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var webinarSection = document.getElementById('webinar');
+    var hideDate = new Date('2024-10-10T12:00:00 AM');
+    var currentDate = new Date();
+
+    if (currentDate >= hideDate) {
+      webinarSection.style.display = 'none';
+    }
+  });
+</script>
+
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
+    <div class="row">
+
+    <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/about.jpg" alt="">
+    </div>
+    <div class="content">
+        <h3>I'm Sudais Khalid</h3>
+        <span class="tag">Gen Ai Engineer | Graphics Designer</span>
+        
+          <p>I am an ambitious Artificial Intelligence student at Shifa Tameer-e-Millat University with a passion for leveraging technology to solve complex problems. My expertise spans multiple programming languages, including C++, Java, and Python, along with proficiency in database management, generative AI, and prompt engineering. Throughout my academic journey, I have developed several innovative projects, such as a remote-controlled plane using deep learning and a comprehensive University Management System.
+
+            In addition to my AI focus, I am a skilled visual graphic designer with over four years of experience offering design services on various online platforms. I specialize in creating compelling graphics for a variety of clients, utilizing tools like Adobe Photoshop, Canva, Corel Draw and Illustrator. With a commitment to continuous learning, I have completed certifications in Generative AI, Prompt Engineering and Google Cloud, aiming to merge creativity and technology in all my endeavors.</p>
+        
+        <div class="box-container">
+            <!-- <div class="box">
+              <p><span> age: </span> 20</p>
+              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
+            </div> -->
+            <div class="box">
+              <p><span> email : </span> sudaiskhalid21236@gmail.com</p>
+              <p><span> place : </span> Islamabad, Pakistan</p>
+            </div>
+        </div>
+        
+        <div class="resumebtn">
+            <a href="./assets/resume/MUHAMMAD SUDAIS KHALID  Resume (1).pdf" download="Sudais_Khalid_Resume.pdf" class="btn"><span>Resume</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+
+    </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+
+
+<!-- skills section starts -->
+<section class="skills" id="skills">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+
+    <div class="container">
+          <div class="row" id="skillsContainer">
+
+            <div class="bar">
+              <div class="info">
+                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
+                <span>AdobeXD</span>
+              </div>
+            </div>
+
+      </div>
+</div>
+</section>
+<!-- skills section ends -->
+
+
+<!-- education section starts -->
+<section class="education" id="education">
+
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+
+    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
+
+    <div class="box-container">
+
+    <div class="box">
+        <div class="image">
+        <img draggable="false" src="./assets/images/educat/STMU.png" alt="">
+        </div>
+        <div class="content">
+        <h3>Bachelor in Artificial Intelligence</h3>
+        <p>Shifa Tameer-e-Millat University | Islamabad</p>
+        <p>CGPA: 3.66</p>
+        <h4>2023-2027 | In Progress</h4>
+        </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+      <img draggable="false" src="./assets/images/educat/orbit.png" alt="">
+      </div>
+      <div class="content">
+      <h3>FSc Pre-Medical</h3>
+      <p>The Orbit College | Thandkoi, Swabi</p>
+      <p>Percentage: 85%</p>
+      <h4>2021-2023 | Completed</h4>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+      <img draggable="false" src="./assets/images/educat/qims.jpg" alt="">
+      </div>
+      <div class="content">
+
+      <h3>Matric</h3>
+      <p>The QIMS | Lahor, Swabi</p>
+      <p>Percentage: 88%</p>
+
+      <h4>2021 | Completed</h4>
+      </div>
+    </div>
+
+</div>
+</section>
+<!-- education section ends -->
+
+
+<!-- certificates section starts -->
+<section class="certificates" id="certificates">
+  <h2 class="heading"><i class="fas fa-certificate"></i> My <span>Certificates</span></h2>
+
+  <div class="certificate-container">
+    <div class="certificate-card">
+      <a href="#" onclick="openCertificate('./assets/images/certificates/certificate1.jpg'); return false;">
+        <img src="./assets/images/certificates/certificate1.jpg" alt="Certificate 1">
+        <div class="certificate-info">
+          <h3>Graphics Designing</h3>
+          <p>AS Community Hub</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="#" onclick="openCertificate('./assets/images/certificates/certificate2.jpg.png'); return false;">
+        <img src="./assets/images/certificates/certificate2.jpg.png" alt="Certificate 2">
+        <div class="certificate-info">
+          <h3>Generative AI</h3>
+          <p>LinkedIn Learning</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="#" onclick="openCertificate('./assets/images/certificates/certificate3.jpg'); return false;">
+        <img src="./assets/images/certificates/certificate3.jpg" alt="Certificate 3">
+        <div class="certificate-info">
+          <h3>Data Base Management System</h3>
+          <p>Great Learning</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="#" onclick="openCertificate('./assets/images/certificates/certificate4.jpg.png'); return false;">
+        <img src="./assets/images/certificates/certificate4.jpg.png" alt="Certificate 4">
+        <div class="certificate-info">
+          <h3>Generative AI Prompt Engineering</h3>
+          <p>Coursera</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="certificate-card">
+      <a href="#" onclick="openCertificate('./assets/images/certificates/certificate5.jpg.png'); return false;">
+        <img src="./assets/images/certificates/certificate5.jpg.png" alt="Certificate 5">
+        <div class="certificate-info">
+          <h3>Basic Python</h3>
+          <p>Uniathen Collaborate with Cambridge International Qualifications UK</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div id="certificateOverlay" class="overlay" onclick="closeCertificate()">
+    <img id="certificateImage" src="" alt="Certificate">
+  </div>
+
+</section>
+
+<!-- certificates section ends -->
+
+
+
+<!-- work project section starts -->
+<section class="work" id="work">
+
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+
+  <div class="box-container">
+
+    <div class="box tilt">
+      <img draggable="false" src="./assets/images/projects/project1.png" alt="" />
+      <div class="content">
+        <div class="tag">
+        <h3>Portfolio Website</h3>
+        </div>
+        <div class="desc">
+          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
+          <div class="btns">
+            <a href="#home" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+            <a href="https://github.com/muhammadsudaiskhalid" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="box-container">
+
+  <div class="box tilt">
+    <img draggable="false" src="./assets/images/projects/sistlogo.png" alt="" />
+    <div class="content">
+      <div class="tag">
+      <h3>SIST 2024 Logo</h3>
+      </div>
+      <div class="desc">
+        <p>Official logo that designed for the national largest event of Pakistan which is organised by Shifa Student Society</p>
+        <div class="btns">
+          <a href="https://stmuedupk-my.sharepoint.com/:i:/g/personal/muhammadsudaiskhalid_artificialintelligence_stmu_edu_pk/Ed9bNbskGtBClml5KroKtgMBruc7ozEE3u6nyC-uDo3NgA?e=fqm620" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+          <a href="https://www.canva.com/design/DAGREry6KPI/Y62NuJgMYDXUufTkVMy3qQ/view?utm_content=DAGREry6KPI&utm_campaign=designshare&utm_medium=link&utm_source=editor" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="box-container">
+
+  <div class="box tilt">
+    <img draggable="false" src="./assets/images/projects/web.png" alt="" />
+    <div class="content">
+      <div class="tag">
+
+      <h3>Article Website</h3>
+      </div>
+      <div class="desc">
+
+        <p>Developed a comprehensive news aggregator website, The World
+          Articles, leveraging Google's API Key, combining HTML, CSS, PHP, and
+          JavaScript to provide a seamless user experience. The platform
+          aggregates news articles from various sources, offering real-time
+          updates, user-friendly interface, filtering, and categorization options.
+          This project demonstrates my skills in web development, API
+          integration, and database management, with the potential to provide
+          users with a comprehensive source of global news and facilitate
+          informed decision-making.</p>
+        <div class="btns">
+          <a href="https://www.linkedin.com/posts/muhammad-sudais-khalid-ba272830b_im-happy-to-share-this-the-world-articles-activity-7216318136097107969-Yioi?utm_source=share&utm_medium=member_desktop" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+          <a href="https://github.com/muhammadsudaiskhalid" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="viewall">
+  <a href="./projects/index.html" class="btn"><span>View All</span>
+    <i class="fas fa-arrow-right"></i>
+</a>
+</div>
+
+</section>
+<!-- work project section ends -->
+
+<!-- experience section starts -->
+<section class="experience" id="experience">
+
+  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
+
+  <div class="timeline">
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Graphics Internee</h2>
+        </div>
+        <div class="desc">
+            <h3>AS Community HUB</h3>
+            <p>Feb 2024</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Graphics Designer</h2>
+        </div>
+        <div class="desc">
+            <h3>Shifa Student Society</h3>
+            <p>May - September 2024</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Freelancing</h2>
+        </div>
+        <div class="desc">
+            <h3>Online Plateform</h3>
+            <p>June 2021 - present</p>
+        </div>
+      </div>
+    </div>
+
+  <div class="morebtn">
+    <a href="./experience/index.html" class="btn"><span>View All</span>
+      <i class="fas fa-arrow-right"></i>
+  </a>
+  </div>
+
+</div>
+
+</section>
+<!-- experience section ends -->
+
+
+<!-- services section starts -->
+<section class="services" id="services" style="background-color: #e6f7ff;">
+  <h2 class="heading"><i class="fas fa-concierge-bell"></i> My <span>Services</span></h2>
+  <div class="service-container" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <div class="service-column" style="flex: 0 0 48%;">
+      <div class="service-box" style="background-color: #f0f8ff; border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 10px;">
+        <i class="fas fa-paint-brush" style="color: #ff6347;"></i>
+        <h3>Graphic Design</h3>
+        <p>Creating visually appealing designs for various media including websites, social media, and print materials. Our designs are tailored to meet your specific needs and help you stand out.</p>
+      </div>
+      <div class="service-box" style="background-color: #f0f8ff; border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 10px;">
+        <i class="fas fa-code" style="color: #ff6347;"></i>
+        <h3>Web Development</h3>
+        <p>Building responsive and user-friendly websites using the latest web technologies. We ensure your website is fast, secure, and optimized for all devices.</p>
+      </div>
+      <div class="service-box" style="background-color: #f0f8ff; border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 10px;">
+        <i class="fas fa-laptop-code" style="color: #ff6347;"></i>
+        <h3>IT Work</h3>
+        <p>Providing comprehensive IT services including system administration, network management, and technical support. Our team ensures your IT infrastructure is robust, secure, and efficient.</p>
+      </div>
+      <div class="service-box" style="background-color: #f0f8ff; border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 10px;">
+        <i class="fas fa-bullhorn" style="color: #ff6347;"></i>
+        <h3>Digital Marketing</h3>
+        <p>Developing and executing digital marketing campaigns to promote brands and drive traffic. We use data-driven strategies to maximize your ROI and reach your target audience.</p>
+      </div>
+    </div>
+    <div class="service-column" style="flex: 0 0 48%;">
+      <div class="service-box" style="background-color: #f0f8ff; border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 10px;">
+        <i class="fas fa-code" style="color: #ff6347;"></i>
+        <h3>Programming</h3>
+        <p>Offering programming services in various languages including Python, Java, and C++. Whether you need software development, automation scripts, or complex algorithms, we have the expertise to deliver high-quality code tailored to your requirements.</p>
+      </div>
+      <div class="service-box" style="background-color: #f0f8ff; border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 10px;">
+        <i class="fas fa-brain" style="color: #ff6347;"></i>
+        <h3>Prompt Engineering</h3>
+        <p>Specializing in crafting and optimizing prompts for AI models to ensure accurate and relevant responses. Our expertise in prompt engineering helps in enhancing the performance and reliability of AI-driven applications.</p>
+      </div>
+      <div class="service-box" style="background-color: #f0f8ff; border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 10px;">
+        <i class="fas fa-brain" style="color: #ff6347;"></i>
+        <h3>AI Solutions</h3>
+        <p>Implementing AI-driven solutions to enhance business processes and decision-making. Our AI solutions are designed to improve efficiency, accuracy, and provide valuable insights.</p>
+      </div>
+      <div class="service-box" style="background-color: #f0f8ff; border: 1px solid #ccc; padding: 20px; margin: 10px; border-radius: 10px;">
+        <i class="fas fa-chalkboard-teacher" style="color: #ff6347;"></i>
+        <h3>AI Webinars</h3>
+        <p>Offering webinars on various AI topics to help you stay updated with the latest advancements in artificial intelligence. Join our webinars to gain in-depth knowledge and practical insights from industry experts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 768px) {
+    .service-column {
+      flex: 0 0 100%;
+    }
+  }
+</style>
+<!-- services section ends -->
+
+<!-- testimonials section starts -->
+<section class="testimonials" id="testimonials">
+  <h2 class="heading"><i class="fas fa-comments"></i> Client <span>Testimonials</span></h2>
+  
+  <div class="testimonial-container">
+    <div class="testimonial-slide">
+      <div class="testimonial-content">
+        <img src="./assets/images/cleint1.jpeg" alt="John Doe" class="client-image">
+        <div class="rating">
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(0, 0, 0); font-size: 1.5em;">&#9733;</span>
+        </div>
+        <p>"Sudais is a highly talented designer whose creativity knows no bounds. His meticulous attention to detail ensured that my vision was not only realized but exceeded in every way. I wholeheartedly recommend Sudais for any design project. 
+          "</p>
+        <h3>- John Doe</h3>
+      </div>
+    </div>
+    
+    <div class="testimonial-slide">
+      <div class="testimonial-content">
+        <img src="./assets/images/cleint2.jpeg" alt="Jane Smith" class="client-image">
+        <div class="rating">
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(0, 0, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(1, 1, 1); font-size: 1.5em;">&#9733;</span>
+        </div>
+        <p>"Working with Sudais was a pleasure. He's professional, responsive, and delivers high-quality work on time."</p>
+        <h3>- Jane Smith</h3>
+      </div>
+    </div>
+    
+    <div class="testimonial-slide">
+      <div class="testimonial-content">
+        <img src="./assets/images/cleint3.jpeg" alt="Alex Johnson" class="client-image">
+        <div class="rating">
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+        </div>
+        <p>"Sudais's AI expertise is impressive. He helped us implement cutting-edge solutions that transformed our business processes."</p>
+        <h3>- Alex Johnson</h3>
+      </div>
+    </div>
+    
+    <div class="testimonial-slide">
+      <div class="testimonial-content">
+        <img src="./assets/images/cleint4.jpeg" alt="Emily Thompson" class="client-image">
+        <div class="rating">
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(255, 132, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(0, 0, 0); font-size: 1.5em;">&#9733;</span>
+          <span class="star" style="color: rgb(0, 0, 0); font-size: 1.5em;">&#9733;</span>
+        </div>
+        <p>"Sudais's graphic design skills are top-notch. He created stunning visuals that perfectly captured our brand identity and message."</p>
+        <h3>- Emily Thompson</h3>
+      </div>
+    </div>
+    <div class="testimonial-navigation">
+      <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+      <span class="next" onclick="plusSlides(1)">&#10095;</span>
+    </div>
+    <div class="testimonial-dots">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="testimonial-button">
+    <a href="https://www.linkedin.com/in/muhammad-sudais-khalid-ba272830b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="btn" style="background-color: #0073b1; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Add Your Testimonial  <i class="fab fa-linkedin"></i></a>
+  </div>
+</section>
+
+<!-- testimonials section ends -->
+
+
+<!-- contact section starts -->
+<section class="contact" id="contact">
+  
+  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+  <div class="container">
+    <div class="content">
+      <div class="image-box">
+        <img draggable="false" src="./assets/images/contact1.png" alt="">
+      </div>
+      <form id="contact-form">
+        <div class="form-group">
+          <div class="field">
+            <input type="text" name="name" placeholder="Name" required>
+            <i class='fas fa-user'></i>
+          </div>
+          <div class="field">
+            <input type="text" name="email" placeholder="Email" required>
+            <i class='fas fa-envelope'></i>
+          </div>
+          <div class="field">
+            <input type="text" name="phone" placeholder="Phone">
+            <i class='fas fa-phone-alt'></i>
+          </div>
+          <div class="message">
+            <textarea placeholder="Message" name="message" required></textarea>
+            <i class="fas fa-comment-dots"></i>
+          </div>
+        </div>
+        <div class="button-area">
+          <button type="submit">
+            Submit <i class="fa fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+  </div>
+  </div>
+</section>
+<!-- contact section ends -->
+
+
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>Sudais Khalid's Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#webinar"><i class="fas fa-chevron-circle-right"></i> webinar</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+          <a href="#services"><i class="fas fa-chevron-circle-right"></i> services</a>
+          <a href="#testimonials"><i class="fas fa-chevron-circle-right"></i> testimonials</a>
+      </div>
+     
+      <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-phone"></i>+92 318-513-3092</p>
+          <p> <i class="fas fa-envelope"></i>sudaiskhalid21236@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Islamabad, Pakistan</p>
+          <div class="share">
+
+              <a href="https://www.linkedin.com/in/muhammad-sudais-khalid-ba272830b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+              <a href="https://github.com/muhammadsudaiskhalid" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+              <a href="mailto:sudaiskhalid21236@gmail.com" class="fas fa-envelope" target="_blank"></a>
+              <a href="https://twitter.com/jigar_sable" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
+              <a href="https://t.me/lifecode5" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
+          </div>
+      <div class="chatbot-button">
+        <h1><a href="https://sudaiss-assistant.zapier.app/" class="btn" target="_blank">
+          <i class="fas fa-robot"></i> Chat with Sudais's AI Assistant
+        </a></h1>
+      </div>
+      </div>
+      <div class="box">
+        <h3>My Location</h3>
+        <div id="map"></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1651.8174128236983!2d73.15851299778151!3d33.656432892551635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfea361718de33%3A0x91f1ece2592f8b98!2sDubai%20Boys%20Hostel!5e0!3m2!1sen!2s!4v1726974306562!5m2!1sen!2s" width="280" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+  
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/muhammad-sudais-khalid-ba272830b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> Sudais Khalid</a><p>Copyright © 2024 Sudais Khalid. All rights reserved.</p></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="./assets/js/script.js"></script>
+
+<!-- <style>
+  .Whatsapp_float{
+      position: fixed;
+      bottom: 70px;
+      left: 30px;
+  }
+</style>
+<div class="Whatsapp_float">
+<a href="https://wa.me/+923185133092 " target="_blank"><img  src="./assets/images/whatsapp.png" width="65px" class="Whatsapp_float_btn" alt=""> </a>
+</div> -->
+
+</body>
+</html>
+
+
+<script>
+  // Function to set a cookie
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+
+  // Function to get a cookie
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  // Function to erase a cookie
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-99999999;';
+  }
+
+  // Function to show cookie consent banner
+  function showCookieConsent() {
+    var consentBanner = document.createElement('div');
+    consentBanner.id = 'cookie-consent-banner';
+    consentBanner.innerHTML = `
+      <div style="position: fixed; bottom: 0; width: 100%; background: #333; color: #fff; padding: 30px; text-align: center; z-index: 1000; font-size: 1.5em;">
+        This website uses cookies to ensure you get the best experience. 
+        <button id="accept-cookies" style="margin-left: 30px; padding: 15px 30px; background: #4CAF50; color: white; border: none; cursor: pointer; font-size: 1.2em;">Accept</button>
+        <button id="decline-cookies" style="margin-left: 30px; padding: 15px 30px; background: #f44336; color: white; border: none; cursor: pointer; font-size: 1.2em;">Decline</button>
+      </div>
+    `;
+    document.body.appendChild(consentBanner);
+
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+      setCookie('userConsent', 'accepted', 365);
+      document.body.removeChild(consentBanner);
+    });
+
+    document.getElementById('decline-cookies').addEventListener('click', function() {
+      setCookie('userConsent', 'declined', 365);
+      document.body.removeChild(consentBanner);
+    });
+  }
+
+  // Check if user has given consent
+  document.addEventListener('DOMContentLoaded', function() {
+    if (!getCookie('userConsent')) {
+      showCookieConsent();
+    }
+  });
+</script>
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '520048320958316');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=520048320958316&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
