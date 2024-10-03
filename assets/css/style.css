@@ -1775,3 +1775,73 @@ form .button-area {
 .assistant-button .btn i {
   margin-left: 0.3rem;
 }
+
+/* cookies banner starts */
+
+#cookies-banner {
+  font-size: 0.9rem;
+  width: auto;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  border-radius: 10px;
+  background-color: #333;
+  z-index: 1000;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cookies-container {
+  min-height: 70px;
+  display: grid;
+  grid-template-columns: 70px auto 200px;
+  justify-items: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.cookies-container i {
+  padding: 10px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+#allow,
+#decline {
+  width: 100px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 2px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid rgba(211, 211, 211, 0.3);
+  background-color: #1a1a1a;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#allow:hover,
+#decline:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  #cookies-banner {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  .cookies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+/* cookies banner ends */
