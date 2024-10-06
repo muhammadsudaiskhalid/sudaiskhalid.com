@@ -28,6 +28,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+
 *::selection {
   background: #2506ad;
   color: #fff;
@@ -76,9 +77,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1.7rem 5%;
-  height: 6.5rem;
+  height: 7.5rem;
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
+  box-shadow: 0 1px 4px rgba(81, 89, 97, 0.3);
 }
 section {
   min-height: 110vh;
@@ -93,12 +94,26 @@ section {
 .heading span {
   color: rgb(115, 3, 167);
 }
-header .logo {
+header .logo img {
   font-size: 1.9rem;
   font-weight: 800;
   text-decoration: none;
   color: #0e2431;
+  width: 120px;
+  height: 100px;
+  margin-top: 5px;
+  transition: transform 0.5s ease;
 }
+
+header img:hover {
+  transform: scale(1.1) rotateY(10deg) rotateX(10deg);
+}
+
+
+/* header img:hover{
+  animation: fadeInUp 0.5s ease-in-out 0s 1 normal forwards;
+} */
+
 header .logo i {
   font-size: 2.2rem;
 }
@@ -646,6 +661,58 @@ button:hover {
 }
 /* about media queries ends*/
 /* about section ends */
+
+/* hobbies start*/
+#hobbies {
+  background-color: rgba(244, 180, 68, 0.6);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.hobbies-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hobbies-box {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px;
+  text-align: left;
+}
+
+.hobbies-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #f4b344;
+}
+
+.hobby-title {
+  font-size: 1.5rem;
+  margin: 15px 0 1opx;
+  color: #333;
+  margin-left: 8px;
+}
+
+.hobby-description {
+  font-size: 1rem;
+  color: #666;
+  padding: 0 15px 15px;
+}
+
+/* hobbies end */
 
 /* skills section starts */
 .skills {

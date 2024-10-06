@@ -360,3 +360,4 @@ if (getCookie("cookieConsent") !== null) {
   cookiesBanner.style.display = "none";
 }
 // cookies banner ends
+
