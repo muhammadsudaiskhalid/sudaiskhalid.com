@@ -136,7 +136,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var webinarSection = document.getElementById('webinar');
-    var hideDate = new Date('2024-10-10T12:00:00 AM');
+    var hideDate = new Date('2024-09-10T00:00:00'); // Changed to 00:00:00 for correct comparison
     var currentDate = new Date();
 
     if (currentDate >= hideDate) {
@@ -153,7 +153,7 @@
     <div class="row">
 
     <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/about.jpg" alt="">
+        <img draggable="false" class="tilt" src="./assets/images/about (2).JPG" alt="">
     </div>
     <div class="content">
         <h3>I'm Sudais Khalid</h3>
@@ -225,6 +225,12 @@
         <h3 class="hobby-title">Social Media</h3>
         <p class="hobby-description">Engaging with social media allows me to connect with others, share ideas, and stay updated on trends. It enhances my communication skills and provides a platform for creativity.</p>
     </div>
+    <div class="hobbies-box">
+        <img src="./assets/images/hobbies/badminton.jpg" alt="Badminton" class="hobby-image" />
+        <h3 class="hobby-title">Badminton</h3>
+        <p class="hobby-description">Playing badminton is a great way to stay active and improve my agility. It also provides a fun way to socialize and compete with friends.</p>
+    </div>
+
     </div>
 </section>
 <!-- hobbies section ends -->
@@ -736,6 +742,138 @@
 </section>
 
 <!-- testimonials section ends -->
+
+<!-- Start Generation Here -->
+<!-- <div class="logo-slider">
+  <h2 class="heading">Companies I've Worked With</h2>
+  <div class="logos">
+    <img src="./assets/images/companies/1.jpg" alt="Company Logo 1" class="logo">
+    <img src="./assets/images/companies/2.jpg" alt="Company Logo 2" class="logo">
+    <img src="./assets/images/companies/3.png" alt="Company Logo 3" class="logo">
+    <img src="./assets/images/companies/4.jpg" alt="Company Logo 4" class="logo">
+    <img src="./assets/images/companies/5.png" alt="Company Logo 5" class="logo">
+    <img src="./assets/images/companies/6.jpg" alt="Company Logo 6" class="logo">
+    <img src="./assets/images/companies/7.png" alt="Company Logo 7" class="logo">
+    <img src="./assets/images/companies/8.jpg" alt="Company Logo 8" class="logo">
+    <img src="./assets/images/companies/9.jpg" alt="Company Logo 9" class="logo">
+  </div>
+</div>
+
+<style>
+  .logo-slider {
+      padding: 20px;
+      text-align: center;
+      background-color: transparent; /* Changed to remove background */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .logos {
+      display: flex;
+      overflow: auto;
+      white-space: nowrap;
+      padding: 10px 0;
+  }
+
+  .logo {
+      height: 100px;
+      margin: 0 15px;
+      transition: transform 0.3s;
+      background: transparent; /* Changed to remove background */
+  }
+
+  .logo:hover {
+      transform: scale(1.1);
+  }
+</style>
+
+<script>
+  const logos = document.querySelector('.logos');
+  let isMouseDown = false;
+  let startX, scrollLeft;
+
+  logos.addEventListener('mousedown', (e) => {
+      isMouseDown = true;
+      startX = e.pageX - logos.offsetLeft;
+      scrollLeft = logos.scrollLeft;
+  });
+
+  logos.addEventListener('mouseleave', () => {
+      isMouseDown = false;
+  });
+
+  logos.addEventListener('mouseup', () => {
+      isMouseDown = false;
+  });
+
+  logos.addEventListener('mousemove', (e) => {
+      if (!isMouseDown) return;
+      e.preventDefault();
+      const x = e.pageX - logos.offsetLeft;
+      const walk = (x - startX) * 2; // Adjust scroll speed
+      logos.scrollLeft = scrollLeft - walk;
+  });
+</script>
+<-- End Generation Here -->
+
+
+
+<!-- youtube vedios starts -->
+<section class="youtube-video" id="youtube-video">
+    <h2 class="heading"><i class="fab fa-youtube"></i> My <span>YouTube Shots</span></h2>
+    <div class="video-container">
+        <iframe class="video" src="https://www.youtube.com/embed/Cxdl7iOy_Tc" title="YouTube Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="video" src="https://www.youtube.com/embed/8NzNQE_sWh0" title="YouTube Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="video" src="https://www.youtube.com/embed/IKhUYUhz6G4" title="YouTube Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="video" src="https://www.youtube.com/embed/CeBvDKbIWVI" title="YouTube Video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="video" src="https://www.youtube.com/embed/z32FG_8oCqE" title="YouTube Video 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="video" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7223908092671868928?embed=true" title="LinkedIn Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+
+<style>
+    .youtube-video {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .heading {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .video-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .video {
+        width: 28%;
+        height: 200px;
+        border-radius: 8px;
+        transition: transform 0.3s;
+    }
+
+    .video:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
 
 
 <!-- contact section starts -->
